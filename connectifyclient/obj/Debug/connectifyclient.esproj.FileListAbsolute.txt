@@ -1,0 +1,2 @@
+C:\Users\User\source\repos\Connectify\connectifyclient\obj\Debug\connectifyclient.esproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\Connectify\connectifyclient\obj\Debug\connectifyclient.esproj.CoreCompileInputs.cache
