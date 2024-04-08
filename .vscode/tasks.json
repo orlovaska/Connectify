@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "detail": "Установка зависимостей npm",
+            "type": "npm",
+            "script": "install",
+            "path": "connectifyclient",
+            "problemMatcher": [],
+            "label": "npm: install - connectifyclient"
+        },
+        {
+            "label": "npm: tslint",
+            "detail": "Статический анализ кода Typescript",
+            "type": "npm",
+            "script": "tslint",
+            "path": "connectifyclient",
+            "problemMatcher": ["$tsc"]
+        },
+
+        {
+            "label": "Start Frontend",
+            "type": "npm",
+            "script": "start",
+            "path": "connectifyclient/",
+            "problemMatcher": [],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "build-ConnectifyAPI",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "${workspaceFolder}/ConnectifyAPI/ConnectifyAPI.csproj", // Путь к файлу проекта
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

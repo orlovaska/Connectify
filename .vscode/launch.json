@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "FullStack",
+            "configurations": ["Frontend", "API"]
+            // "configurations": ["Frontend", "API with Swagger"]
+        }
+    ],
+    "configurations": [
+        {
+            "name": "Frontend",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/connectifyclient",
+            "preLaunchTask": "Start Frontend"
+        },
+        {
+            "name": "API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-ConnectifyAPI",
+            "program": "${workspaceFolder}/ConnectifyAPI/bin/Debug/net6.0/ConnectifyAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ConnectifyAPI",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/ConnectifyAPI/Views"
+            }
+        },
+        {
+            "name": "API with Swagger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-ConnectifyAPI",
+            "program": "${workspaceFolder}/ConnectifyAPI/bin/Debug/net6.0/ConnectifyAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ConnectifyAPI",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger/index.html"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/ConnectifyAPI/Views"
+            }
+        }
+    ]
+}
