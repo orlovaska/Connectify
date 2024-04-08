@@ -1,26 +1,37 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": true,
     "target": "es5",
+    "downlevelIteration": true,
+    "jsx": "react",
+    "types": [],
+    "experimentalDecorators": true,
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es2017"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCase",
+          "goToDefinition": true
+        }
+      }
+    ],
+    "esModuleInterop": true
   },
+  "compileOnSave": true,
   "include": [
-    "src"
-  ]
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents"
+  }
 }

@@ -14,7 +14,7 @@
             "request": "launch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}/connectifyclient",
-            "preLaunchTask": "Start Frontend"
+            "preLaunchTask": "start connectifyclient"
         },
         {
             "name": "API",
