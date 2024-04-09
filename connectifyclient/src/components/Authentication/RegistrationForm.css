@@ -1,0 +1,7 @@
+.registration-form-container {
+    display:block;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 300px;
+  }
+  
