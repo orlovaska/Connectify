@@ -10,6 +10,14 @@
             "label": "npm: install - connectifyclient"
         },
         {
+            "detail": "Генерация строк i18next",
+            "type": "npm",
+            "script": "toc",
+            "path": "connectifyclient",
+            "problemMatcher": [],
+            "label": "npm: toc - connectifyclient"
+        },
+        {
             "label": "npm: tslint",
             "detail": "Статический анализ кода Typescript",
             "type": "npm",

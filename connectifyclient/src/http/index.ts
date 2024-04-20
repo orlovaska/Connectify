@@ -1,6 +1,5 @@
 import axios from 'axios';
 //TODO убрать после
-//@ts-ignore
 import Cookies from 'js-cookie';
 import { API_URL, AUTH_CONTROLLER_ROUTE } from '../utils/consts';
 
