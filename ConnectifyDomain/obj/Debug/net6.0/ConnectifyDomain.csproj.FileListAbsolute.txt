@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\bin\Debug\net6.0\ConnectifyDomain.deps.json
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\bin\Debug\net6.0\ConnectifyDomain.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\bin\Debug\net6.0\ConnectifyDomain.pdb
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.AssemblyInfo.cs
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\refint\ConnectifyDomain.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ConnectifyDomain.pdb
+C:\Users\User\source\repos\Connectify\ConnectifyDomain\obj\Debug\net6.0\ref\ConnectifyDomain.dll

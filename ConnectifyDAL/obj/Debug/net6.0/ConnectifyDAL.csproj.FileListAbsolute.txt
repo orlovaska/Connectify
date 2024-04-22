@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\bin\Debug\net6.0\ConnectifyDAL.deps.json
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\bin\Debug\net6.0\ConnectifyDAL.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\bin\Debug\net6.0\ConnectifyDAL.pdb
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.AssemblyInfo.cs
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\refint\ConnectifyDAL.dll
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ConnectifyDAL.pdb
+C:\Users\User\source\repos\Connectify\ConnectifyDAL\obj\Debug\net6.0\ref\ConnectifyDAL.dll

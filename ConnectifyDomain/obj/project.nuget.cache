@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "adAc92zL4GNFCIhc50JlLCoeYPjshwJB6HRxT0JfHN4gjVu1jqbwu8pGjzReNKCKNtbwqxpG4RoOqMsFY+ZkLQ==",
+  "dgSpecHash": "HZx9zD9BegoIEo0RiZxNCn5fet5WnaAnPmDlryxWVnTlek5OyuDeM8rDuGJj+w1XVmIfMb9CL3dbEV83JH+O/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\Connectify\\ConnectifyDomain\\ConnectifyDomain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\reinforced.typings\\1.6.3\\reinforced.typings.1.6.3.nupkg.sha512"
+  ],
   "logs": []
 }

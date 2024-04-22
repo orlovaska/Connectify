@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VEOGAcJ6/zdmIvOnz3YhFVCf2eH9EDmh/JVWxTcfJ2OTWLpUWkdeMjfgGzxTUwNbQe0kjy+Flb2RAcI+vBegmw==",
+  "dgSpecHash": "qxrC/JDYqbgrcXQ5PbMJlW7wGyJWs1kQJT7jGfXMuf7dRPcrYqe5OH99G4bLM/ugPnnG08rAB5yghARTcGEBZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\Connectify\\ConnectifyDAL\\ConnectifyDAL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\reinforced.typings\\1.6.3\\reinforced.typings.1.6.3.nupkg.sha512"
+  ],
   "logs": []
 }
