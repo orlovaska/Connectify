@@ -8,6 +8,13 @@
     "alreadyHaveAccount": "Уже есть аккаунт?",
     "signIn": "Войти",
     "notHaveAccountYet": "Ещё нет акккаунта?",
-    "signUp": "Зарегистрироваться"
+    "signUp": "Зарегистрироваться",
+    "errors": {
+      "wrongLogOrPass": "Неверный логин или пароль",
+      "invalidUsernameFormat": "Неверный формат логина",
+      "invalidEmailFormat": "Неверный формат почты",
+      "invalidPasswordFormat": "Пароль должен включать цифру, строчную и заглавную буквы, спецсимвол",
+      "registrationFailed": "Ошибка регистрации"
+    }
   }
 }

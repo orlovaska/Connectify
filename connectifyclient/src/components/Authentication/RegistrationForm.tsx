@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import AuthService from "../../services/AuthService";
-import TextField from "@mui/material/TextField";
+import { Link, useNavigate } from "react-router-dom";
+import { TextField, Button, Alert } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { Button } from "@mui/material";
-import "./RegistrationForm.css";
-import { Link } from "react-router-dom";
+import AuthService from "../../services/AuthService";
+import { userSlice } from "../../store/reducers/UserSlice";
 import { isValidEmail, isValidPassword } from "../../utils/inputValidation";
 import { useAppDispatch } from "../../hooks/redux";
-import { userSlice } from "../../store/reducers/UserSlice";
-import { useNavigate } from "react-router-dom";
 import { HOME_ROUTE, LOGIN_ROUTE } from "../../routing/routesConsts";
 
 interface IRegistrationFormProps {}
@@ -20,48 +17,54 @@ const RegistrationForm: React.FC<IRegistrationFormProps> = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    //TODO сделать обработку ошибок
-    const [showError, setShowError] = useState<boolean>(false);
-    const [error, setError] = useState<string>("");
+    const [error, setError] = useState<string | null>(null);
 
     const handleUsernameChange = (
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
         setUsername(event.target.value);
+        if (error) setError(null); // Сброс ошибки при изменении ввода
     };
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
-    };
-
-    const handleSubmit = async () => {
-        //debugger;
-        if (!isValidEmail(email)) {
-            return;
-        }
-        if (!isValidPassword(password)) {
-            return;
-        }
-
-        AuthService.registration(username, email, password)
-            .then((response) => {
-                AuthService.login(username, password).then((response) => {
-                    const { login } = userSlice.actions;
-                    dispatch(login(response.data.user));
-                    navigate(HOME_ROUTE, { replace: true });
-                });
-            })
-            .catch((error) => {
-                setError(error);
-                setShowError(true);
-                console.log("AuthService запрос. Ошибка", error);
-            });
+        if (error) setError(null); // Сброс ошибки при изменении ввода
     };
 
     const handlePasswordChange = (
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
         setPassword(event.target.value);
+        if (error) setError(null); // Сброс ошибки при изменении ввода
+    };
+
+    const handleSubmit = async () => {
+        if (!username) {
+            setError(t("auth.errors.invalidUsernameFormat"));
+            return;
+        }
+        if (!isValidEmail(email)) {
+            setError(t("auth.errors.invalidEmailFormat"));
+            return;
+        }
+        if (!isValidPassword(password)) {
+            setError(t("auth.errors.invalidPasswordFormat"));
+            return;
+        }
+
+        try {
+            const response = await AuthService.registration(
+                username,
+                email,
+                password
+            );
+            const loginResponse = await AuthService.login(username, password);
+            const { login } = userSlice.actions;
+            dispatch(login(loginResponse.data.user));
+            navigate(HOME_ROUTE, { replace: true });
+        } catch (err) {
+            setError(t("auth.errors.registrationFailed"));
+        }
     };
 
     return (
@@ -81,33 +84,40 @@ const RegistrationForm: React.FC<IRegistrationFormProps> = () => {
                 variant="outlined"
                 size="small"
                 onChange={handleUsernameChange}
-                sx={{ mb: 2 }} // Добавление отступа снизу
+                sx={{ mb: 2 }}
             />
             <TextField
                 fullWidth
                 id="email"
                 label={t("auth.email")}
+                type="email"
                 variant="outlined"
                 size="small"
                 onChange={handleEmailChange}
-                sx={{ mb: 2 }} // Добавление отступа снизу
+                sx={{ mb: 2 }}
             />
             <TextField
                 fullWidth
                 id="password"
                 label={t("auth.password")}
+                type="password"
                 variant="outlined"
                 size="small"
                 onChange={handlePasswordChange}
-                sx={{ mb: 2 }} // Добавление отступа снизу
+                sx={{ mb: 2 }}
             />
+            {error && (
+                <Alert severity="error" sx={{ mb: 2 }}>
+                    {error}
+                </Alert>
+            )}
             <Button
                 fullWidth
                 variant="contained"
                 color="primary"
                 size="small"
                 onClick={handleSubmit}
-                sx={{ mb: 2 }} // Добавление отступа снизу
+                sx={{ mb: 2 }}
             >
                 {t("auth.signUp")}
             </Button>
