@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { REGISTER_ROUTE } from "../../utils/consts";
 import { Link, useNavigate } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -7,7 +6,7 @@ import AuthService from "../../services/AuthService";
 import { userSlice } from "../../store/reducers/UserSlice";
 import { isValidPassword } from "../../utils/inputValidation";
 import { useAppDispatch } from "../../hooks/redux";
-import { HOME_ROUTE } from "../../routing/routesConsts";
+import { HOME_ROUTE, REGISTRATION_ROUTE } from "../../routing/routesConsts";
 
 interface ILoginProps {}
 
@@ -89,7 +88,7 @@ const LoginForm: React.FC<ILoginProps> = () => {
                 </Button>
                 <p>
                     {t("auth.notHaveAccountYet")}{" "}
-                    <Link to={REGISTER_ROUTE}>{t("auth.signUp")}</Link>
+                    <Link to={REGISTRATION_ROUTE}>{t("auth.signUp")}</Link>
                 </p>
             </div>
     );

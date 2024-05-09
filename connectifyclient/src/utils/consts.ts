@@ -1,13 +1,15 @@
-export const API_URL = `http://localhost:5077/api`
+export const API_URL = `http://localhost:5077/api`;
 
-export const AUTH_CONTROLLER_ROUTE = '/authentication'
+// Базовые адреса контроллеров
+export const ControllerUrls = {
+    AUTH: "/authentication",
+};
 
-export const LOGIN_ROUTE = '/login'
-export const REGISTER_ROUTE = '/register'
-export const LOGOUT_ROUTE = '/logout'
-
-
-
-
-
-
+// Отдельные роуты для методов
+export const APIEndpoints = {
+    AUTH: {
+        LOGIN: "/login",
+        REGISTER: "/register",
+        LOGOUT: "/logout",
+    },
+};

@@ -1,7 +1,7 @@
 import axios from 'axios';
 //TODO убрать после
 import Cookies from 'js-cookie';
-import { API_URL, AUTH_CONTROLLER_ROUTE } from '../utils/consts';
+import { API_URL, ControllerUrls } from '../utils/consts';
 
 const $api = axios.create({
     withCredentials: true,
@@ -24,7 +24,7 @@ $api.interceptors.response.use((config) => {
             const accessToken = localStorage.getItem('token');
             const refreshToken = Cookies.get('refreshToken');
             //TODO - сделать LoginResponse, убрать any
-            const response = await axios.post<any>(`${API_URL}${AUTH_CONTROLLER_ROUTE}/refresh`, { accessToken: accessToken, refreshToken: refreshToken })
+            const response = await axios.post<any>(`${API_URL}${ControllerUrls.AUTH}/refresh`, { accessToken: accessToken, refreshToken: refreshToken })
             const newAccessTokenToken =response.data.accessToken;
             localStorage.setItem('token', newAccessTokenToken);
             // Установка refreshToken в куку без указания срока истечения
