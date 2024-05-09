@@ -53,15 +53,17 @@ const RegistrationForm: React.FC<IRegistrationFormProps> = () => {
         }
 
         try {
-            const response = await AuthService.registration(
-                username,
-                email,
-                password
-            );
-            const loginResponse = await AuthService.login(username, password);
-            const { login } = userSlice.actions;
-            dispatch(login(loginResponse.data.user));
-            navigate(HOME_ROUTE, { replace: true });
+            AuthService.registration(username, email, password)
+                .then(() => {
+                    AuthService.login(username, password).then((response) => {
+                        const { login } = userSlice.actions;
+                        dispatch(login(response.data.user));
+                        navigate(HOME_ROUTE, { replace: true });
+                    });
+                })
+                .catch(() => {
+                    setError(t("auth.errors.registrationFailed"));
+                });
         } catch (err) {
             setError(t("auth.errors.registrationFailed"));
         }
