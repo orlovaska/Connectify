@@ -25,9 +25,32 @@
             "path": "connectifyclient",
             "problemMatcher": ["$tsc"]
         },
-
         {
-            "label": "Start Frontend",
+            "label": "npm: tslint-fix",
+            "detail": "Статический анализ кода Typescript и устранение ошибок",
+            "type": "npm",
+            "script": "tslint-fix",
+            "path": "connectifyclient",
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "label": "npm: stylelint",
+            "detail": "Статический анализ кода  CSS",
+            "type": "npm",
+            "script": "stylelint",
+            "path": "connectifyclient",
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "label": "npm: stylelint-fix",
+            "detail": "Статический анализ кода  CSS и устранение ошибок",
+            "type": "npm",
+            "script": "stylelint-fix",
+            "path": "connectifyclient",
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "label": "start connectifyclient",
             "type": "npm",
             "script": "start",
             "path": "connectifyclient/",
