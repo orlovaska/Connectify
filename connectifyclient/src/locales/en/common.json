@@ -1,0 +1,20 @@
+{
+  "auth": {
+    "password": "Password",
+    "username": "Username",
+    "email": "Email",
+    "registration": "Registration",
+    "login": "Login",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "notHaveAccountYet": "Don't have an account yet?",
+    "signUp": "Sign up",
+    "errors": {
+      "wrongLogOrPass": "Wrong login or password",
+      "invalidUsernameFormat": "Invalid username format",
+      "invalidEmailFormat": "Invalid mail format",
+      "invalidPasswordFormat": "Password must include a number, lowercase, uppercase, and special character",
+      "registrationFailed": "Registration error"
+    }
+  }
+}

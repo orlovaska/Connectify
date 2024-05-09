@@ -1,0 +1,5 @@
+// export const LOGIN_ROUTE = '/login'
+export const LOGIN_ROUTE = '/'
+export const REGISTRATION_ROUTE = '/registration'
+export const WORKSPACE_ROUTE = '/workspace'
+export const HOME_ROUTE = '/home'
